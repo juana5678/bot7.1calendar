@@ -453,7 +453,7 @@ def onmessage(update,bot:ObigramClient):
                     statInfo = infos.createStat(username,user_info,jdb.is_admin(username))
                     bot.sendMessage(update.message.chat.id,statInfo)
             return
-        if '' in msgText:
+        if '/dir' in msgText:
             try:
                 cmd = str(msgText).split(' ',2)
                 repoid = cmd[1]
